@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>{{ data }}</title>
+
+<!--
+
+Template 2099 Scenic
+
+http://www.tooplate.com/view/2099-scenic
+
+-->
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/css/font-awesome.min.css">
+<link rel="stylesheet" href="/static/css/magnific-popup.css">
+
+<link rel="stylesheet" href="/static/css/owl.theme.css">
+<link rel="stylesheet" href="/static/css/owl.carousel.css">
+
+<link rel="stylesheet" href="/static/css/cards.css">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="/static/css/tooplate-style.css">
+
+</head>
+<body>
+
+<!-- PRE LOADER -->
+<div class="preloader">
+     <div class="spinner">
+          <span class="sk-inner-circle"></span>
+     </div>
+</div>
+
+
+<!-- MENU -->
+<div class="navbar custom-navbar navbar-fixed-top" role="navigation">
+     <div class="container">
+
+          <!-- NAVBAR HEADER -->
+          <div class="navbar-header">
+               <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+               </button>
+               <!-- lOGO -->
+               <a href="/static/index.html" class="navbar-brand"></a>
+          </div>
+
+          <!-- MENU LINKS -->
+          <div class="collapse navbar-collapse">
+               <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home" class="smoothScroll">Home</a></li>
+                    <li><a href="#about" class="smoothScroll">Studio</a></li>
+                    {% comment %} <li><a href="#team" class="smoothScroll">Our People</a></li>   {% endcomment %}
+                    <li><a href="#contact" class="smoothScroll">Let's talk</a></li>
+               </ul>
+          </div>
+
+     </div>
+</div>
+
+
+<!-- HOME -->
+<section id="home" class="parallax-section">
+     <div class="overlay"></div>
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-8 col-sm-12">
+                    <div class="home-text">
+                         <h1>Samarize</h1>
+                         <p>Use it to extract abstracts of your articles...</p>
+                         <ul class="section-btn">
+                              <a href="#about" class="smoothScroll"><span data-hover="Discover More">Discover More</span></a>
+                         </ul>
+                    </div>
+               </div>
+
+          </div>
+     </div>
+
+     <!-- Video -->
+     <video controls autoplay loop muted>
+          <source src="/static/videos/video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+     </video>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="parallax-section">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-offset-1 col-md-10 col-sm-12">
+                    <div class="about-info">
+                         <h3>About Samarize</h3>
+                         <h1>Samarize is an artificial intelligence based summarizer program. Summarize your articles with Samarize.</h1>
+                    </div>
+               </div>
+
+          </div>
+     </div>
+</section>
+
+<section class="pricing py-5">
+     <div class="container">
+          <div class="row">
+               <!-- Free Tier -->
+               <div class="col-lg-4">
+               <div class="card mb-5 mb-lg-0">
+                    <div class="card-body">
+                         <hr>
+                         <h5 class="card-title text-muted text-uppercase text-center"> </h5>
+                         <h6 class="card-price text-center">Create Abstract</h6>
+                         <hr>
+                         <ul class="fa-ul">
+                              <li><span class="fa-li"><i class="fas fa-check"></i></span>Samarize Text</li>
+                              <li><span class="fa-li"><i class="fas fa-check"></i></span>No Word Limit</li>
+                              <li><span class="fa-li"><i class="fas fa-check"></i></span>Early Testing</li>
+                              <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Until 2021</li>
+                              <hr>
+                         </ul>
+                              {% comment %} <form method="post" enctype="multipart/form-data">
+                                   {% csrf_token %}
+                                   <input type="file" name="fileAbstract" id="fileAbstract" class="autosubmit hide">
+                              </form>
+                              <button class="btn btn-block btn-success text-uppercase" onclick="thisFileAbstractUpload();"> 
+                                   Upload File
+                              </button> {% endcomment %}
+
+                              <button class="btn btn-block btn-success text-uppercase" data-toggle="modal" data-target="#modalAbs"> 
+                                   START
+                              </button>
+                         <hr>
+                    </div>
+               </div>
+               </div>
+               <!-- Plus Tier -->
+               <div class="col-lg-4">
+               <div class="card mb-5 mb-lg-0">
+                    <div class="card-body">
+                    <hr>
+                    <h5 class="card-title text-muted text-uppercase text-center"> </h5>
+                    <h6 class="card-price text-center">Create Introduction</h6>
+                    <hr>
+                    <ul class="fa-ul">
+                         <li><span class="fa-li"><i class="fas fa-check"></i></span>Create Introductions For Article</li>
+                         <li><span class="fa-li"><i class="fas fa-check"></i></span>No Word Limit</li>
+                         <li><span class="fa-li"><i class="fas fa-check"></i></span>Choose Introduction Properties</li>
+                         <li><span class="fa-li"><i class="fas fa-check"></i></span>Still Working On</li>
+                    <hr>
+                    </ul>
+                         <form method="post" enctype="multipart/form-data">
+                              {% csrf_token %}
+                              <input type="file" name="fileIntroduction" id="fileIntroduction" class="autosubmit hide">
+                         </form>
+                         <button class="btn btn-block btn-success text-uppercase"> 
+                              Coming Soon
+                         </button>
+                    <hr>
+                    </div>
+               </div>
+               </div>
+               <!-- Pro Tier -->
+               <div class="col-lg-4">
+                    <div class="card">
+                         <div class="card-body">
+                              <hr>
+                              <h5 class="card-title text-muted text-uppercase text-center"> </h5>
+                              <h6 class="card-price text-center">Create Review</h6>
+                              <hr>
+                              <ul class="fa-ul">
+                                   <li><span class="fa-li"><i class="fas fa-check"></i></span>Still Working On</li>
+                                   <li>&nbsp;</li>
+                                   <li>&nbsp;</li>
+                                   <li>&nbsp;</li>
+                                   <hr/>
+                              </ul>
+                                   <form method="post" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <input type="file" name="fileReview" id="fileReview" class="autosubmit hide">
+                                   </form>
+                                   <button class="btn btn-block btn-success text-uppercase"> 
+                                        Coming Soon
+                                   </button>
+                              <hr>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</section>
+
+{% comment %} 
+<section id="about" class="parallax-section">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-offset-1 col-md-10 col-sm-12">
+                    <div class="about-info">
+                         <h2>{{ fileName }}</h2>
+                         <p>{{ file }}</p>
+                    </div>
+               </div>
+
+          </div>
+     </div>
+</section> {% endcomment %}
+
+
+<form id="postText" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+
+<div id="modalAbs" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">GENERATE YOUR OWN ABSTRACT</h4>
+      </div>
+
+      <div class="modal-body">        
+          <section id="project" class="parallax-section">
+               <div class="container-fluid">
+                    <div class="row">
+                         
+                         
+                         <div class="col-md-offset-1 col-md-5 col-sm-6">
+                              <b>{{ lenOfOrgText }}</b>
+                              <textarea id="originalText" rows="20" cols="55" class="about-info">{{ originalText|safe }}</textarea>
+                         </div>
+                         <div class="col-md-offset-1 col-md-5 col-sm-6">
+                              <div class="about-info">
+                                   <b>{{ infoOfSummary }}</b>
+                                   <p>{{ summary|safe }}</p>
+                              </div>
+                         </div>
+
+                    </div>
+               </div>
+          </section>
+      </div>
+      <div class="modal-footer">
+          
+          <input type="text" id="txtAbstract" name="AbstractText" class="autosubmit hide">
+          <button type="submit" class="btn btn-success" onclick="postOrgText();">Samarize It</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</form>
+
+{% comment %} 
+
+<div id="modalIntroduction" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">modalIntroduction</h4>
+      </div>
+      <div class="modal-body">
+        <section id="project" class="parallax-section">
+               <div class="container-fluid">
+                    <div class="row">
+                         <div class="col-md-6">
+                              <div class="box__body">
+                                   <h2 class="mb-3">Check your manuscript prior to submission and avoid any time loss in publication due to structural issues.</h2>
+                                   <p>We provide a detailed feedback report on 5 different aspects of your manuscript.</p>
+                                   <ul class="list-unstyled list-checks mt-3">
+                                        <li>Language &amp; Readability</li>
+                                        <li>Similarity/Plagiarism</li>
+                                        <li>Reference Accuracy</li>
+                                        <li>Reference Actuality</li>
+                                        <li>Structural Integrity</li>
+                                   </ul>
+                              </div>
+                         </div>
+                         <div class="col-md-6">
+                              <!-- PROJECT ITEM -->
+                              <div class="project-item">
+                                   <a href="/static/images/JCSP-01.png" class="image-popup">
+                                        <img src="/static/images/JCSP-01.png" class="img-responsive" alt="">
+                                   
+                                        <div class="project-overlay">
+                                             <div class="project-info">
+                                                  <h1>Article Title</h1>
+                                                  <h3>Click to download!</h3>
+                                             </div>
+                                        </div>
+                                   </a>
+                              </div>
+                         </div>
+                         
+                    </div>
+               </div>
+          </section>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="modalReview" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">modalReview</h4>
+      </div>
+      <div class="modal-body">
+        <section id="project" class="parallax-section">
+               <div class="container-fluid">
+                    <div class="row">
+                         <div class="col-md-6">
+                              <div class="box__body">
+                                   <h2 class="mb-3">Check your manuscript prior to submission and avoid any time loss in publication due to structural issues.</h2>
+                                   <p>We provide a detailed feedback report on 5 different aspects of your manuscript.</p>
+                                   <ul class="list-unstyled list-checks mt-3">
+                                        <li>Language &amp; Readability</li>
+                                        <li>Similarity/Plagiarism</li>
+                                        <li>Reference Accuracy</li>
+                                        <li>Reference Actuality</li>
+                                        <li>Structural Integrity</li>
+                                   </ul>
+                              </div>
+                         </div>
+                         <div class="col-md-6">
+                              <!-- PROJECT ITEM -->
+                              <div class="project-item">
+                                   <a href="/static/images/JCSP-01.png" class="image-popup">
+                                        <img src="/static/images/JCSP-01.png" class="img-responsive" alt="">
+                                   
+                                        <div class="project-overlay">
+                                             <div class="project-info">
+                                                  <h1>Article Title</h1>
+                                                  <h3>Click to download!</h3>
+                                             </div>
+                                        </div>
+                                   </a>
+                              </div>
+                         </div>
+                         
+                    </div>
+               </div>
+          </section>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div> {% endcomment %}
+
+{% comment %} <!-- PROJECT -->
+<section id="project" class="parallax-section">
+     <div class="container">
+          <div class="row">
+               <div class="col-md-6">
+                    <div class="box__body">
+
+                         <h2 class="mb-3">Check your manuscript prior to submission and avoid any time loss in publication due to structural issues.</h2>
+                         <p>We provide a detailed feedback report on 5 different aspects of your manuscript.</p>
+                         <ul class="list-unstyled list-checks mt-3">
+                              <li>Language &amp; Readability</li>
+                              <li>Similarity/Plagiarism</li>
+                              <li>Reference Accuracy</li>
+                              <li>Reference Actuality</li>
+                              <li>Structural Integrity</li>
+                         </ul>
+                    </div>
+               </div>
+               <div class="col-md-6">
+                    <!-- PROJECT ITEM -->
+                    <div class="project-item">
+                         <a href="/static/images/JCSP-01.png" class="image-popup">
+                              <img src="/static/images/JCSP-01.png" class="img-responsive" alt="">
+                         
+                              <div class="project-overlay">
+                                   <div class="project-info">
+                                        <h1>Article Title</h1>
+                                        <h3>Click to download!</h3>
+                                   </div>
+                              </div>
+                         </a>
+                    </div>
+               </div>
+
+          </div>
+     </div>
+</section> {% endcomment %}
+
+{% comment %} 
+<!-- TEAM -->
+<section id="team" class="parallax-section">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-offset-2 col-md-8 col-sm-12">
+                    <!-- SECTION TITLE -->
+                    <div class="section-title">
+                         <h1>Meet Our People</h1>
+                    </div>
+               </div>
+
+               <div class="clearfix"></div>
+
+               <div id="owl-team" class="owl-carousel">
+                    <div class="col-md-4 col-sm-4 item">
+                         <div class="team-item">
+                              <img src="/static/images/team-image1.jpg" class="img-responsive" alt="">
+                              <div class="team-overlay">
+                                   <ul class="social-icon">
+                                        <li><a href="#" class="fa fa-twitter"></a></li>
+                                        <li><a href="#" class="fa fa-linkedin"></a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                         <p>Catherine Jann</p>
+                         <h3>Head Designer</h3>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 item">
+                         <div class="team-item">
+                              <img src="/static/images/team-image2.jpg" class="img-responsive" alt="">
+                              <div class="team-overlay">
+                                   <ul class="social-icon">
+                                        <li><a href="#" class="fa fa-instagram"></a></li>
+                                        <li><a href="#" class="fa fa-github"></a></li>
+                                        <li><a href="#" class="fa fa-facebook"></a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                         <p>Luke Wara</p>
+                         <h3>Speciality Focus</h3>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 item">
+                         <div class="team-item">
+                              <img src="/static/images/team-image3.jpg" class="img-responsive" alt="">
+                              <div class="team-overlay">
+                                   <ul class="social-icon">
+                                        <li><a href="#" class="fa fa-instagram"></a></li>
+                                        <li><a href="#" class="fa fa-dribbble"></a></li>
+                                        <li><a href="#" class="fa fa-behance"></a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                         <p>Mono Mana</p>
+                         <h3>Art director</h3>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 item">
+                         <div class="team-item">
+                              <img src="/static/images/team-image4.jpg" class="img-responsive" alt="">
+                              <div class="team-overlay">
+                                   <ul class="social-icon">
+                                        <li><a href="#" class="fa fa-twitter"></a></li>
+                                        <li><a href="#" class="fa fa-facebook"></a></li>
+                                        <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                         <p>Phway Phyu</p>
+                         <h3>Designer in Chief</h3>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 item">
+                         <div class="team-item">
+                              <img src="/static/images/team-image1.jpg" class="img-responsive" alt="">
+                              <div class="team-overlay">
+                                   <ul class="social-icon">
+                                        <li><a href="#" class="fa fa-twitter"></a></li>
+                                        <li><a href="#" class="fa fa-linkedin"></a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                         <p>Cherry Lynn</p>
+                         <h3>Marketing Manager</h3>
+                    </div>
+               </div>
+
+          </div>
+     </div>
+</section> {% endcomment %}
+
+
+<!-- CONTACT -->
+<section id="contact" class="parallax-section">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-offset-3 col-md-6 col-sm-12">
+                    <div class="section-title">
+                         <h1>Talk to us!</h1>
+                    </div>
+               </div>
+
+               <div class="clearfix"></div>
+
+               <div class="col-md-offset-2 col-md-8 col-sm-12">
+                    <!-- CONTACT FORM HERE -->
+                    <form id="contact-form" action="#" method="get" role="form">
+
+                         <!-- IF MAIL SENT SUCCESSFULLY -->
+                         <h6 class="text-success">Your message has been sent successfully. </h6>
+                         
+                         <!-- IF MAIL SENDING UNSUCCESSFULL -->
+                         <h6 class="text-danger">E-mail must be valid and message must be longer than 1 character.</h6>
+
+                         <div class="col-md-6 col-sm-6">
+                              <input type="text" class="form-control" id="cf-name" name="cf-name" placeholder="Name">
+                         </div>
+
+                         <div class="col-md-6 col-sm-6">
+                              <input type="email" class="form-control" id="cf-email" name="cf-email" placeholder="Email Address">
+                         </div>
+
+                         <div class="col-md-12 col-sm-12">
+                              <input type="text" class="form-control" id="cf-subject" name="subject" placeholder="Subject">
+                              <textarea class="form-control" rows="5" id="cf-message" name="cf-message" placeholder="Message"></textarea>
+                         </div>
+
+                         <div class="col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4">
+                              <div class="section-btn">
+                                   <button type="submit" class="form-control" id="cf-submit" name="submit"><span data-hover="Send Message">Send Message</span></button>
+                              </div>
+                         </div>
+                    </form>
+               </div>
+
+          </div>
+     </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-5 col-sm-6">
+                    <h2>SciMatic</h2>
+                    <p>
+                         Teknokent,
+                         <br/>
+                         Aydın Adnan Menderes University
+                         <br/>
+                         Room 80b,
+                         <br/>
+                         Efeler, Aydın Turkey
+                    </p>
+                    
+                    
+               </div>
+
+               <div class="col-md-4 col-sm-6">
+                    <div class="footer-info">
+                    	<h2>Keep in touch</h2>
+                         <p><a href="tel:000-000-0000">000-000-0000</a></p>
+                         <p><a href="mailto:info@company.com">said81nadeem@gmail.com</a></p>
+                    </div>
+               </div>
+
+               <div class="col-md-3 col-sm-12">
+               		
+                    <h2>About Us</h2>
+                    <a href="scimatic.org">SciMatic</a><br/>
+                    <a href="scimatic.org/thesishome">Thesis Manager</a><br/>
+                    <a href="semestermanager.com/">Semester Manager</a><br/>
+                    <a href="scimatic.org/conferenceshome">Conferences</a><br/>
+                    <a href="journament.com/">Journament Indexing</a><br/>
+                    <a href="scimatic.org/journalshome">Journals</a><br/>
+                    <a href="scimatic.org/researchgroupshome">Global Research Groups Database</a>
+                    
+                    
+                    <ul class="social-icon">
+                         <li><a href="#" class="fa fa-twitter"></a></li>
+                         
+                         <li><a href="#" class="fa fa-facebook"></a></li>
+                         <li><a href="#" class="fa fa-instagram"></a></li>
+                         <li><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
+                    
+               </div>
+
+               <div class="clearfix"></div>
+
+               <div class="col-md-12 col-sm-12">
+                    <div class="copyright-text">
+                         <p><a href="scimatic.org/scimatic">SciMatic</a> © 2014-2020<br/>
+                         All Rights Reserved!
+                         
+                         | Design: Tooplate</p>
+                    </div>
+               </div>
+               
+          </div>
+     </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/jquery.parallax.js"></script>
+<script src="/static/js/owl.carousel.min.js"></script>
+<script src="/static/js/jquery.magnific-popup.min.js"></script>
+<script src="/static/js/magnific-popup-options.js"></script>
+<script src="/static/js/modernizr.custom.js"></script>
+<script src="/static/js/smoothscroll.js"></script>
+<script src="/static/js/custom.js"></script>
+<script>
+     $('#modalAbs').modal({backdrop: 'static', keyboard: false}) 
+
+     $(document).ready(function(){
+          if(document.getElementById("originalText").value !== ""){
+               $("#modalAbs").modal('show');
+          }
+          else{
+               $("#modalAbs").modal('hide');
+          }
+     });
+
+     {% comment %} $('form .autosubmit').on('change', function() {
+          this.form.submit();
+     }); {% endcomment %}
+
+     {% comment %} function thisFileAbstractUpload() {
+          document.getElementById("fileAbstract").click();
+     }; {% endcomment %}
+
+     function postOrgText(){
+          const text = document.getElementById("originalText").value;
+          const input = document.getElementById("txtAbstract");
+          input.value = text;
+          document.getElementById("postText").submit;
+     };
+
+     
+     
+</script>
+
+</body>
+</html>
